@@ -2,7 +2,7 @@
 
 Screenshot
 
-![logo](https://labo.olivierdelort.net/olivier/motd/blob/master/screen_shot.jpg "Screenshot_blank")
+![logo](https://framagit.org/draconis/motd/blob/master/screen_shot.jpg "Screenshot_blank")
 
 ## Configuration :
 
