@@ -1,0 +1,33 @@
+#!/bin/bash
+PROCCOUNT=`ps -Afl | wc -l`
+PROCCOUNT=`expr $PROCCOUNT - 5`
+ 
+uptime=$(</proc/uptime)
+uptime=${uptime%%.*}
+ 
+seconds=$(( uptime%60 ))
+minutes=$(( uptime/60%60 ))
+hours=$(( uptime/60/60%24 ))
+days=$(( uptime/60/60/24 ))
+ 
+echo -e "
+\033[1;31m+++++++++++++++++: \033[0;37mSystem Data\033[1;31m :+++++++++++++++++++
++ \033[0;37mHostname \033[1;31m= \033[1;32m`hostname`
+\033[1;31m+ \033[0;37mAddress \033[1;31m= \033[1;32m`ip addr show | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p' |  sed ':a;N;$!ba;s/\n/ , /g'`
+\033[1;31m+ \033[0;37mSystem \033[1;31m= \033[1;32m`lsb_release -d | awk -F':' '{print $2}' | sed 's/^\s*//g'`
+\033[1;31m+ \033[0;37mKernel \033[1;31m= \033[1;32m`uname -r`
+\033[1;31m+ \033[0;37mCPU Info \033[1;31m= \033[1;32m`more /proc/cpuinfo | grep -i processor | wc -l` "x" `more /proc/cpuinfo | grep 'model name' | uniq |awk -F":"  '{print $2}'`
+\033[1;31m+ \033[0;37mUptime \033[1;31m= \033[1;32m"$days days, $hours hours, $minutes minutes, $seconds seconds"
+\033[1;31m+ \033[0;37mMemory \033[1;31m= \033[1;32m`free -m |grep Mem: | awk -F " " '{print $2}'` MO / `free -m |grep Mem: | awk -F " " '{print $3}'` MO Used
+\033[1;31m+ \033[0;37mMemory Free \033[1;31m= \033[1;32m`free -m |grep Mem: | awk -F " " '{print $4}'` MO
+\033[1;31m+ \033[0;37mSwap \033[1;31m= \033[1;32m`free -m | tail -n 1 | awk {'print $2'}` Mb Total | \033[1;32m`free -m | tail -n 1 | awk {'print $4'}` Mb Free | \033[1;32m`free -m | tail -n 1 | awk {'print $3'}` Mb used
+\033[1;31m+ \033[0;37mRoot Disk Space \033[1;31m= \033[1;32m`df -h / | awk '{ a = $2 } END { print a }'` Total | \033[1;32m`df -h / | awk '{ a = $3 } END { print a }'` Used | \033[1;32m`df -h / | awk '{ a = $4 } END { print a }'` Free
+\033[1;31m+ \033[0;37mOpenVz Space Use \033[1;31m= \033[1;32m`/usr/local/bin/openvz`
+\033[1;31m+ \033[0;37mLXC Space Use \033[1;31m= \033[1;32m`/usr/local/bin/lxc`
+\033[1;31m+++++++++++++++++: \033[0;37mUser Data\033[1;31m :+++++++++++++++++++++
++ \033[0;37mUsername \033[1;31m= \033[1;32m`whoami`
+\033[1;31m+ \033[0;37mProcesses \033[1;31m= \033[1;32m$PROCCOUNT of `ulimit -u` MAX
+\033[1;31m+++++++++++++++++: \033[0;37mLast Maintenance\033[1;31m :++++++++++++++
+\033[1;32m`tail /etc/motd-maint -n 3`
+\033[1;31m+++++++++++++++++++++++++++++++++++++++++++++++++++\033[0m"
+
