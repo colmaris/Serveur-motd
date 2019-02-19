@@ -1,15 +1,15 @@
 #!/bin/bash
 PROCCOUNT=`ps -Afl | wc -l`
 PROCCOUNT=`expr $PROCCOUNT - 5`
- 
+
 uptime=$(</proc/uptime)
 uptime=${uptime%%.*}
- 
+
 seconds=$(( uptime%60 ))
 minutes=$(( uptime/60%60 ))
 hours=$(( uptime/60/60%24 ))
 days=$(( uptime/60/60/24 ))
- 
+
 echo -e "
 \033[1;31m+++++++++++++++++: \033[0;37mSystem Data\033[1;31m :+++++++++++++++++++
 + \033[0;37mHostname \033[1;31m= \033[1;32m`hostname`
@@ -22,7 +22,6 @@ echo -e "
 \033[1;31m+ \033[0;37mMemory Free \033[1;31m= \033[1;32m`free -m |grep Mem: | awk -F " " '{print $4}'` MO
 \033[1;31m+ \033[0;37mSwap \033[1;31m= \033[1;32m`free -m | tail -n 1 | awk {'print $2'}` Mb Total | \033[1;32m`free -m | tail -n 1 | awk {'print $4'}` Mb Free | \033[1;32m`free -m | tail -n 1 | awk {'print $3'}` Mb used
 \033[1;31m+ \033[0;37mRoot Disk Space \033[1;31m= \033[1;32m`df -h / | awk '{ a = $2 } END { print a }'` Total | \033[1;32m`df -h / | awk '{ a = $3 } END { print a }'` Used | \033[1;32m`df -h / | awk '{ a = $4 } END { print a }'` Free
-\033[1;31m+ \033[0;37mOpenVz Space Use \033[1;31m= \033[1;32m`/usr/local/bin/openvz`
 \033[1;31m+ \033[0;37mLXC Space Use \033[1;31m= \033[1;32m`/usr/local/bin/lxc`
 \033[1;31m+++++++++++++++++: \033[0;37mUser Data\033[1;31m :+++++++++++++++++++++
 + \033[0;37mUsername \033[1;31m= \033[1;32m`whoami`
@@ -30,4 +29,3 @@ echo -e "
 \033[1;31m+++++++++++++++++: \033[0;37mLast Maintenance\033[1;31m :++++++++++++++
 \033[1;32m`tail /etc/motd-maint -n 3`
 \033[1;31m+++++++++++++++++++++++++++++++++++++++++++++++++++\033[0m"
-
