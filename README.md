@@ -15,7 +15,7 @@ Screenshot
 ## Install the developpment release
 
 ```
-git clone https://labo.olivierdelort.net/olivier/motd.git
+git clone https://framagit.org/draconis/motd.git
 ```
 
 Disable the SSH's motd
