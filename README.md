@@ -4,7 +4,7 @@ Screenshot
 
 ![logo](/screen_shot.jpg "Screenshot_blank")
 
-## Dependences :
+## Dependencies :
 
  You have to install the rsb-release package to use it.
 
