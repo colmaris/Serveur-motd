@@ -3,11 +3,11 @@
 HOMEDIR=$HOME
 USERNAME=$(whoami)
 
-USE_SUDO=''
+#USE_SUDO=''
 if [ $USERNAME != "root" ];
 then
-  USE_SUDO="sudo "
-fi
+  echo "run this script with root priviliges !"
+else
 
 # install the motd
 echo "Installing motd..."
@@ -31,4 +31,4 @@ fi
 echo "" > /etc/motd
 chmod +x /usr/local/bin/motd
 chmod +x /usr/local/bin/lxc
-exit 0
+fi
