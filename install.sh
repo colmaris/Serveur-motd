@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 HOMEDIR=$HOME
 USERNAME=$(whoami)
