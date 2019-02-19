@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ -d "/var/lib/vz" ];then
+df -h /var/lib/vz | awk '{ a = $5} END {print a}';
+else
+echo "Not Installed";
+fi

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ -d "/var/lib/lxc" ];then
+df -h /var/lib/lxc | awk '{ a = $5} END {print a}';
+else
+echo "Not Installed";
+fi

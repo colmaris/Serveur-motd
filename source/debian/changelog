@@ -1,0 +1,108 @@
+coldmotd (1.7) stable; urgency=low
+
+  * disable the system message of the day
+
+ -- Olivier Delort <courriel@olivierdelort.net>  Fri, 23 Oct 2015 11:18:00 +0100
+
+coldmotd (1.6) stable; urgency=low
+
+  * obsolete ifconfig fixed by ip addr show
+
+ -- Olivier Delort <courriel@olivierdelort.net>  Wed, 21 Oct 2015 00:56:00 +0100
+	
+coldmotd (1.5) stable; urgency=low
+
+  * back to the first install for zsh users
+
+ -- Olivier Delort <courriel@olivierdelort.net>  Wed, 21 Oct 2015 00:13:00 +0100
+
+coldmotd (1.4) stable; urgency=low
+
+  * message for zsh most viewer
+
+ -- Olivier Delort <courriel@olivierdelort.net>  Wed, 21 Oct 2015 00:13:00 +0100
+
+coldmotd (1.3) stable; urgency=low
+
+  * pause in postintall file fixed
+
+ -- Olivier Delort <courriel@olivierdelort.net>  Wed, 21 Oct 2015 00:07:00 +0100
+
+coldmotd (1.2) stable; urgency=low
+
+  * installation fixed fir zsh users
+
+ -- Olivier Delort <courriel@olivierdelort.net>  Wed, 21 Oct 2015 00:03:00 +0100
+	
+coldmotd (1.1) stable; urgency=low
+
+  * use space disk for root partition added
+  * container space disk use for openvz and lxc
+
+ -- Olivier Delort <courriel@olivierdelort.net>  Tue, 20 Oct 2015 23:42:00 +0100
+	
+coldmotd (1.0) stable; urgency=low
+
+  * new code
+  * Most simply to configure and install
+
+ -- Olivier Delort <courriel@olivierdelort.net>  Thu, 25 Jun 2015 06:56:00 +0100
+
+coldmotd (1.0.1) stable; urgency=low
+
+  * new layout
+
+ -- Olivier Delort <courriel@olivierdelort.net>  Mon, 28 Apr 2014 13:12:00 +0100
+
+coldmotd (1.0.0) unstable; urgency=low
+
+  * disk usage deleted
+  * warning message deleted
+  * new ascii logo
+  * first stable version 1.0.0
+
+ -- Olivier Delort <courriel@olivierdelort.net>  Mon, 28 Apr 2014 13:12:00 +0100
+
+
+coldmotd (0.1-beta5) unstable; urgency=low
+
+  * new logo.
+    
+
+ -- Olivier Delort <courriel@olivierdelort.net>  Fri, 21 Mar 2014 14:12:00 +0100
+
+coldmotd (0.1-beta4) unstable; urgency=low
+
+  * motd.tcl right configured at the end of the postinst.
+    
+
+ -- Olivier Delort <courriel@olivierdelort.net>  Fri, 21 Mar 2014 14:12:00 +0100
+
+coldmotd (0.1-beta3) unstable; urgency=low
+
+  * fi function was forgoten.
+    
+
+ -- Olivier Delort <courriel@olivierdelort.net>  Fri, 21 Mar 2014 11:56:00 +0100
+
+
+coldmotd (0.1-beta2) unstable; urgency=low
+
+  * exit 0 added at the end of the postinst file.
+    
+
+ -- Olivier Delort <courriel@olivierdelort.net>  Fri, 21 Mar 2014 11:56:00 +0100
+
+coldmotd (0.1-beta1) unstable; urgency=low
+
+  * postinst file added to install new bootlogs file.
+    
+
+ -- Olivier Delort <courriel@olivierdelort.net>  Fri, 21 Mar 2014 10:56:00 +0100
+
+coldmotd (0.1) unstable; urgency=low
+
+  * Initial release.
+    
+
+ -- Olivier Delort <courriel@olivierdelort.net>  Fri, 21 Mar 2014 06:56:00 +0100

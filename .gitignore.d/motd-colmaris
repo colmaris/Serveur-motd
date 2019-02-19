@@ -1,0 +1,16 @@
+*
+!/git
+!/git/motd-colmaris
+!/git/motd-colmaris/README.md
+!/git/motd-colmaris/source
+!/git/motd-colmaris/source/bootlogs
+!/git/motd-colmaris/source/debian
+!/git/motd-colmaris/source/debian/changelog
+!/git/motd-colmaris/source/debian/compat
+!/git/motd-colmaris/source/debian/control
+!/git/motd-colmaris/source/debian/copyright
+!/git/motd-colmaris/source/debian/postinst
+!/git/motd-colmaris/source/debian/rules
+!/git/motd-colmaris/source/motd
+!/git/motd-colmaris/source/motd.tcl
+!/git/motd-colmaris/source/profile
