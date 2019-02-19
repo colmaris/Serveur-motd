@@ -6,7 +6,7 @@ USERNAME=$(whoami)
 #USE_SUDO=''
 if [ $USERNAME != "root" ];
 then
-  echo "run this script with root priviliges !"
+  echo "YOU HAVE TO RUN THE SCRIPT WITH ROOT PRIVILEGES !"
 else
 
 # install the motd
