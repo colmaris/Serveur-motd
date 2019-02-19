@@ -2,7 +2,7 @@
 
 Screenshot
 
-![logo](https://framagit.org/draconis/motd/blob/master/screen_shot.jpg "Screenshot_blank")
+![logo](/screen_shot.jpg "Screenshot_blank")
 
 ## Configuration :
 
