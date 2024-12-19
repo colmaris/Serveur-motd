@@ -15,7 +15,7 @@ Screenshot
 ## Install
 
 ```
-git clone https://framagit.org/draconis/motd.git
+git clone https://github.com/colmaris/Serveur-motd.git
 ```
 
 Execute the installation's script
